@@ -32,6 +32,7 @@
             "name" : "Lyon",
             "photo" : "https://www.myexpat.fr/wp-content/uploads/panorama-immobilier-lyon.jpeg",
             "description" : "Ville française de la région historique Rhône-Alpes",
+            "duration" : "1 semaine",
             "price" : 3000
         },
         {

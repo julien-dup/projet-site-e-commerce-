@@ -1,4 +1,6 @@
 function displayFrance() {
+    mainContainer.innerHTML = "";
+
     fetch("./assets/json/france.json")
     .then(function (resp) {
         if (resp.ok) {
@@ -23,7 +25,7 @@ function displayFrance() {
 
                     <div class="col-3 d-flex justify-content-center">
                         <div class="row">
-                            <p class="card-title  text-center">${element.price}</p>
+                            <p class="card-title  text-center">${element.price} euros</p>
                             <button class="button1" type="button" class=" btn btn-danger">Ajouter</button>
                         </div>
                     </div>
@@ -38,6 +40,8 @@ function displayFrance() {
 }
 
 function displayEurope() {
+    mainContainer.innerHTML = "";
+
     fetch("./assets/json/europe.json")
     .then(function (resp) {
         if (resp.ok) {
@@ -62,7 +66,7 @@ function displayEurope() {
 
                         <div class="col-3 d-flex justify-content-center">
                             <div class="row">
-                                <p class="card-title  text-center">${element.price}</p>
+                                <p class="card-title  text-center">${element.price} euros</p>
                                 <button class="button1" type="button" class=" btn btn-danger">Ajouter</button>
                             </div>
                         </div>
@@ -77,6 +81,8 @@ function displayEurope() {
 }
 
 function displayMonde() {
+    mainContainer.innerHTML = "";
+
     fetch("./assets/json/monde.json")
     .then(function (resp) {
         if (resp.ok) {
@@ -101,7 +107,7 @@ function displayMonde() {
 
                     <div class="col-3 d-flex justify-content-center">
                         <div class="row">
-                            <p class="card-title  text-center">${element.price}</p>
+                            <p class="card-title  text-center">${element.price} euros</p>
                             <button class="button1" type="button" class=" btn btn-danger">Ajouter</button>
                         </div>
                     </div>
@@ -115,4 +121,16 @@ function displayMonde() {
     });
 }
 
-displayEurope();
+displayFrance();
+
+franceBtn.addEventListener('click', () => {
+    displayFrance();
+});
+
+europeBtn.addEventListener('click', () => {
+    displayEurope();
+});
+
+mondeBtn.addEventListener('click', () => {
+    displayMonde();
+})

@@ -12,7 +12,7 @@ function displayFrance() {
         mainContainer.innerHTML += `
         <div class="col-md-5 col-lg-4 pt-2 rounded-3 text-center">
             <div class="card" style="width: 100%">
-                <img src="${element.photo}" class="card-img-top" alt="Image de la destination">
+                <img src="${element.photo}" class="card-img-top imageCss" height="350px" alt="Image de la destination">
 
                 <div class="card-body row">
                     <h5 class="card-title text-start fontsize1">${element.name} / ${element.duration}</h5>

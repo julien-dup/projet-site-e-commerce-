@@ -3,7 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 @media(min-width: 360px) and (max-width: 767px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
     .header {
         width: 100vw;
         height: 20vh;
@@ -44,6 +50,11 @@
     }
 }
 @media(min-width: 767px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
     .header {
         flex-direction: row;
         background: #87ceeb;
@@ -81,4 +92,45 @@
         background: url("../img/cart-1956097_960_720-removebg-preview.png") no-repeat center;
         background-size: 100%;
     }
+}
+
+/***** JEROME *****/
+
+.description::-webkit-scrollbar {
+    width: 5px;
+    /* width of the entire scrollbar */
+}
+
+.description::-webkit-scrollbar-track {
+    background: rgb(241, 240, 238);
+    /* color of the tracking area */
+}
+
+.description::-webkit-scrollbar-thumb {
+    background-color: rgb(203, 203, 207);
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: rgb(241, 240, 238);
+    /* creates padding around scroll thumb */
+}
+
+.fontsize1 {
+    color: rgb(238, 215, 12);
+}
+
+.description {
+    font-size: small;
+    height: 80px;
+    /* overflow:hidden; */
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
+
+.button1{
+    font-size: small;
+    grid-gap: 0.5em;
+}
+.imagesCss{
+    height: 350px;
 }

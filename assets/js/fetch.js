@@ -115,4 +115,4 @@ function displayMonde() {
     });
 }
 
-displayFrance();
+displayEurope();

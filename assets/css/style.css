@@ -9,7 +9,7 @@
         height: 20vh;
         display: flex;
         flex-wrap: wrap;
-        background: url("../img/ciel2.jpg") no-repeat;
+        background: #87ceeb;
         background-size: 100%;
         flex-direction: column;
     }
@@ -20,7 +20,7 @@
         align-items: center;
         display: flex;
         font-size: 1.5em;
-        color: rgb(20, 20, 18);
+        color: rgb(255, 255, 255);
     }
     .categorie {
         height: 50%;
@@ -32,7 +32,7 @@
     }
     a {
         font-size: 1.5em;
-        color:rgb(10, 10, 10);
+        color:rgb(255, 255, 255);
         text-decoration: none;
         display: flex;
     }

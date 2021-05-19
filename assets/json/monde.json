@@ -5,42 +5,42 @@
             "photo" : "https://content.tui.fr/GroupImages/groupimage_07b12742-2a6a-4588-bdd1-65e71db2c262.jpg?i10c=img.resize(width:300)&frz-v=49",
             "description" : "Le Brésil, vaste pays d'Amérique du Sud, s'étend du bassin amazonien au nord à des vignobles et aux chutes d'Iguaçu au sud.",
             "duration" : "1 semaine",
-            "prix" : "1000 euros"
+            "price" : "1000 euros"
         },
         {
             "name" : "Japon",
             "photo" : "https://content.tui.fr/GroupImages/groupimage_e52ed978-aeee-450a-8e6a-44b95eb82f03.jpg?i10c=img.resize(width:300)&frz-v=49",
             "description" : "Le Japon est un pays insulaire situé dans l'océan Pacifique. Il comporte des villes denses, des palais impériaux, des parcs nationaux montagneux ainsi que des milliers de temples et de sanctuaires.",
             "duration" : "1 semaine",
-            "prix" : "1000 euros"
+            "price" : "1000 euros"
         },
         {
             "name" : "Egypte",
             "photo" : "https://content.tui.fr/GroupImages/groupimage_aacceab5-4fa3-4528-a17b-f0f20221d3b5.jpg?i10c=img.resize(width:300)&frz-v=49",
             "description" : "L'Égypte est un pont entre l'Afrique du Nord-Est et le Moyen-Orient et son histoire remonte à l'époque des pharaons.",
             "duration" : "1 semaine",
-            "prix" : "1000 euros"
+            "price" : "1000 euros"
         },
         {
             "name" : "Guatemala",
             "photo" : "https://content.tui.fr/GroupImages/groupimage_164fa7e3-ac1b-4a2a-b2de-232ba99299d9.jpg?i10c=img.resize(width:300)&frz-v=49",
             "description" : "Le Guatemala, pays d'Amérique centrale au sud du Mexique, possède volcans, forêts tropicales et anciens sites mayas.",
             "duration" : "1 semaine",
-            "prix" : "1000 euros"
+            "price" : "1000 euros"
         },
         {
             "name" : "Afrique du sud",
             "photo" : "https://content.tui.fr/GroupImages/groupimage_073b0d21-ee63-4b02-bcaa-235309eb9543.jpg?i10c=img.resize(width:300)&frz-v=49",
             "description" : "L'Afrique du Sud est un pays situé à l'extrémité australe du continent africain et composé de différents écosystèmes.",
             "duration" : "1 semaine",
-            "prix" : "1000 euros"
+            "price" : "1000 euros"
         },
         {
             "name" : "Panama",
             "photo" : "https://content.tui.fr/GroupImages/groupimage_905f5a7b-15b1-4d65-aa6e-12d6b9a6f5ba.jpg?i10c=img.resize(width:300)&frz-v=49",
             "description" : "Le Panama est un pays situé sur l'isthme rattachant l'Amérique centrale et l'Amérique du Sud.",
             "duration" : "1 semaine",
-            "prix" : "1000 euros"
+            "price" : "1000 euros"
         }
     ]
 }

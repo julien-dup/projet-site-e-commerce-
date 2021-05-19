@@ -1,0 +1,45 @@
+{
+    "results": [
+        {
+            "name" : "Paris",
+            "photo" : "https://photos.tui.fr/vnf/Produits/FRAAC002_circuit-paris-chateaux-de-la-loire-tui.jpg?i10c=img.resize(height:380)",
+            "description" : "Capitale de la France, grande ville européenne et centre mondial de l'art.",
+            "duration" : "1 semaine",
+            "prix" : "6000 euros"
+        },
+        {
+            "name" : "Bordeaux",
+            "photo" : "https://www.bordeaux-tourisme.com/sites/bordeaux_tourisme/files/styles/large/public/medias/widgets/misc/FL%C3%82NERIE%20DANS%20LE%20BORDEAUX%20P%C3%89RIM%C3%88TRE%20UNESCO%20-%20Sc%C3%A8nes%20de%20vie%C2%A9Nicolas%20Duffaure%281%29.jpg?itok=LY1ABGGb",
+            "description" : "Ville portuaire connue pour son architecture.",
+            "duration" : "1 semaine",
+            "prix" : "5000 euros"
+        },
+        {
+            "name" : "Marseille",
+            "photo" : "https://www.colliers.com/-/media/images/colliers/emea/france/bureaux/marseille/tab_list_marseille.ashx?h=523&w=523&hash=10761BC1AB206E3C819ED080A9574A04",
+            "description" : "Ville portuaire du sud de la France. Carrefour du commerce depuis sa création.",
+            "duration" : "1 semaine",
+            "prix" : "4000 euros"
+        },
+        {
+            "name" : "Le Havre",
+            "photo" : "https://cdn.radiofrance.fr/s3/cruiser-production/2016/03/f638b4ed-bd0b-45fc-918a-0a04a7b353e8/838_0de9-_villeduhavre003-page_accueil.jpg",
+            "description" : "Grand port Normand où la Seine rejoint la Manche. Patrimoine mondial de l'UNESCO.",
+            "duration" : "1 semaine",
+            "prix" : "2000 euros"
+        },
+        {
+            "name" : "Lyon",
+            "photo" : "https://www.myexpat.fr/wp-content/uploads/panorama-immobilier-lyon.jpeg",
+            "description" : "Ville française de la région historique Rhône-Alpes",
+            "prix" : "3000 euros"
+        },
+        {
+            "name" : "Lille",
+            "photo" : "https://paris-jetequitte.com/wp-content/uploads/2020/09/Grand-Place-de-Lille-2.jpg",
+            "description" : "Capitale des Hauts-de-France, à proximité de la frontière Belge",
+            "duration" : "1 semaine",
+            "prix" : "1000 euros"
+        }
+    ]
+}

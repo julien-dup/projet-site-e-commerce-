@@ -55,26 +55,20 @@ function displayFrance() {
            <td>${price}euro;</td>
            </tr>`
 
-                           // fonction qui va supprimer et ajouter la quantité
+                           // fonction qui va supprimer et ajouter la quantité de services
         var calculA = 1
                            var suppr= document.querySelectorAll("button[data-minus]")
                            var ajouter= document.querySelectorAll("button[data-plus]")
                            suppr.forEach (element => {
                            element.addEventListener("click", function(){
-                        
                                let soustrait = parseInt(this.dataset.minus)
-                               let ajoute = parseInt(this.dataset.plus)
-                               console.log(typeof soustrait)
-                               var resultatA= (1 + soustrait);
+                               var resultatA= (calculA + soustrait);
                                calculA= eval(resultatA);
                                console.log(calculA)
-
-                           })
-                       })
+                                 })
+                                })
                        ajouter.forEach (element => {
                         element.addEventListener("click", function(){
-                     
-                            let soustrait = parseInt(this.dataset.minus)
                             let ajoute = parseInt(this.dataset.plus)
                             console.log(typeof ajoute)
                             var resultatB= (1 + ajoute);
@@ -145,9 +139,36 @@ function displayEurope() {
                <tr>
                <th>${name}</th>
                <td>${duration}</td>
-               <td><button class="minusBtn">-</button> 1 <button class="plusBtn">+</button></td>
+               <td><button class="minusBtn" data-minus="-1">-</button> <button class="plusBtn" data-plus="+1">+</button></td>
+               <td><div class="quantité"></div></td>
                <td>${price}euro;</td>
                </tr>`
+
+                                           // fonction qui va supprimer et ajouter la quantité de services
+        var calculA = 1
+        var suppr= document.querySelectorAll("button[data-minus]")
+        var ajouter= document.querySelectorAll("button[data-plus]")
+        let affiche = document.querySelector(".quantité")
+        console.log(affiche)
+        suppr.forEach (element => {
+        element.addEventListener("click", function(){
+            let soustrait = parseInt(this.dataset.minus)
+            var resultatA= (calculA + soustrait);
+            calculA= eval(resultatA);
+            console.log(calculA)
+            affiche.innerHTML(calculA)
+            
+              })
+             })
+    ajouter.forEach (element => {
+     element.addEventListener("click", function(){
+         let ajoute = parseInt(this.dataset.plus)
+         var resultatB= (calculA + ajoute);
+         calculA= eval(resultatB);
+         console.log(calculA)
+         })
+          })
+
             })
         })
 
@@ -210,9 +231,32 @@ function displayMonde() {
            <tr>
            <th>${name}</th>
            <td>${duration}</td>
-           <td><button class="minusBtn" data-minus="minus">-</button> 1 <button class="plusBtn" data-plus="plus">+</button></td>
+           <td><button class="minusBtn" data-minus="-1">-</button> 1 <button class="plusBtn" data-plus="+1">+</button></td>
            <td>${price}euro;</td>
            </tr>`
+
+                                           // fonction qui va supprimer et ajouter la quantité de services
+                                           var calculA = 1
+                                           var suppr= document.querySelectorAll("button[data-minus]")
+                                           var ajouter= document.querySelectorAll("button[data-plus]")
+                                           suppr.forEach (element => {
+                                           element.addEventListener("click", function(){
+                                               let soustrait = parseInt(this.dataset.minus)
+                                               var resultatA= (calculA + soustrait);
+                                               calculA= eval(resultatA);
+                                               console.log(calculA)
+                                                 })
+                                                })
+                                       ajouter.forEach (element => {
+                                        element.addEventListener("click", function(){
+                                            let ajoute = parseInt(this.dataset.plus)
+                                            var resultatB= (calculA + ajoute);
+                                            calculA= eval(resultatB);
+                                            console.log(calculA)
+                                            })
+                                             })
+
+
         })
 
     })

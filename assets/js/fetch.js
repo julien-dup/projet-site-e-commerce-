@@ -26,7 +26,7 @@ function displayFrance() {
                     <div class="col-3 d-flex justify-content-center">
                         <div class="row">
                             <p class="card-title  text-center">${element.price} euros</p>
-                            <button class="button1" type="button" data-value="${element.name}" class=" btn btn-danger">Ajouter</button>
+                            <button class="button1" type="button" data-name="${element.name}" class=" btn btn-danger">Ajouter</button>
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@ function displayEurope() {
                         <div class="col-3 d-flex justify-content-center">
                             <div class="row">
                                 <p class="card-title  text-center">${element.price} euros</p>
-                                <button class="button1" type="button" data-value="${element.name}" class=" btn btn-danger">Ajouter</button>
+                                <button class="button1" type="button" data-name="${element.name}" class=" btn btn-danger">Ajouter</button>
                             </div>
                         </div>
                     </div>
@@ -108,7 +108,7 @@ function displayMonde() {
                     <div class="col-3 d-flex justify-content-center">
                         <div class="row">
                             <p class="card-title  text-center">${element.price} euros</p>
-                            <button class="button1" type="button" data-value="${element.name}" class=" btn btn-danger">Ajouter</button>
+                            <button class="button1" type="button" data-name="${element.name}" class=" btn btn-danger">Ajouter</button>
                         </div>
                     </div>
                 </div>
@@ -124,6 +124,11 @@ function displayMonde() {
         console.log("pp")
         element.addEventListener ("click", function (){
             console.log("ok")
+          let name = this.dataset.name
+           console.log(name)
+           window.alert("votre voyage a été ajouté au panier")
+           let modale = document.getElementById("panierModal")
+           
         })
     })
 

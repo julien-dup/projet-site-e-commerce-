@@ -51,22 +51,29 @@ function displayFrance() {
            <tr>
            <th>${name}</th>
            <td>${duration}</td>
-           <td><button class="minusBtn" data-minus="-1">-</button> 1 <button class="plusBtn" data-plus="+1">+</button></td>
+           <td><button class="minusBtn" data-minus="-1">-</button> <span class="calculN"></span> <button class="plusBtn" data-plus="+1">+</button></td>
+           <td><div data-quantité="quantité">1</div></td>
            <td>${price}euro;</td>
            </tr>`
 
                            // fonction qui va supprimer et ajouter la quantité de services
         var calculA = 1
+        function calulesMoi(){
+            console.log(calculA);
+        }
+
                            var suppr= document.querySelectorAll("button[data-minus]")
                            var ajouter= document.querySelectorAll("button[data-plus]")
                            suppr.forEach (element => {
-                           element.addEventListener("click", function(){
-                               let soustrait = parseInt(this.dataset.minus)
-                               var resultatA= (calculA + soustrait);
-                               calculA= eval(resultatA);
-                               console.log(calculA)
-                                 })
+                                element.addEventListener("click", function(){
+                                    let soustrait = parseInt(this.dataset.minus)
+                                    var resultatA = (calculA + soustrait);
+                                    calculA= eval(resultatA);
+                                    console.log(calculA)
+                                    let mySpan = document.querySelectorAll('span');
+                                    mySpan.innerHTML = "toto";
                                 })
+                            })
                        ajouter.forEach (element => {
                         element.addEventListener("click", function(){
                             let ajoute = parseInt(this.dataset.plus)
@@ -77,8 +84,6 @@ function displayFrance() {
                              })
         })
     })
-
-
 
     }).catch(function (error) {
         console.log("Erreur : " + error);

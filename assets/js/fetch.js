@@ -51,7 +51,7 @@ function displayFrance() {
            <tr>
            <th>${name}</th>
            <td>${duration}</td>
-           <td><button class="minusBtn" data-minus="-1">-</button> 1 <button class="plusBtn" data-plus="+1">+</button></td>
+           <td><button class="minusBtn" data-minus="-1">-</button> <1 <button class="plusBtn" data-plus="+1">+</button></td>
            <td>${price}euro;</td>
            </tr>`
 
@@ -78,7 +78,7 @@ function displayFrance() {
                             let ajoute = parseInt(this.dataset.plus)
                             console.log(typeof ajoute)
                             var resultatB= (1 + ajoute);
-                            console.log(resultat)
+                            console.log(resultatB)
 
                         })
                     })

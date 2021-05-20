@@ -57,16 +57,22 @@ function displayFrance() {
 
                            // fonction qui va supprimer et ajouter la quantité de services
         var calculA = 1
+        function calulesMoi(){
+            console.log(calculA);
+        }
+
                            var suppr= document.querySelectorAll("button[data-minus]")
                            var ajouter= document.querySelectorAll("button[data-plus]")
                            suppr.forEach (element => {
-                           element.addEventListener("click", function(){
-                               let soustrait = parseInt(this.dataset.minus)
-                               var resultatA= (calculA + soustrait);
-                               calculA= eval(resultatA);
-                               console.log(calculA)
-                                 })
+                                element.addEventListener("click", function(){
+                                    let soustrait = parseInt(this.dataset.minus)
+                                    var resultatA = (calculA + soustrait);
+                                    calculA= eval(resultatA);
+                                    console.log(calculA)
+                                    let mySpan = document.querySelectorAll('span');
+                                    mySpan.innerHTML = "toto";
                                 })
+                            })
                        ajouter.forEach (element => {
                         element.addEventListener("click", function(){
                             let ajoute = parseInt(this.dataset.plus)
@@ -78,8 +84,6 @@ function displayFrance() {
                     })
         })
     })
-
-
 
     }).catch(function (error) {
         console.log("Erreur : " + error);
@@ -144,7 +148,7 @@ function displayEurope() {
                <td>${price}euro;</td>
                </tr>`
 
-                                           // fonction qui va supprimer et ajouter la quantité de services
+        // fonction qui va supprimer et ajouter la quantité de services
         var calculA = 1
         var suppr= document.querySelectorAll("button[data-minus]")
         var ajouter= document.querySelectorAll("button[data-plus]")

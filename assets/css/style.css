@@ -139,3 +139,83 @@
     border-radius: 50%;
     padding: 0 8px;
 }
+
+.header {
+    margin-bottom: 5rem;
+    background-color: rgb(14, 103, 143);
+    background-position: 50% 80%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 3rem;
+}
+
+.basket {
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px 20px;
+    font-size: 2rem;
+}
+
+.link:hover {
+    color: white;
+    background-color: rgb(14, 103, 143);
+    transition: 0.3s;
+}
+
+.basket:hover {
+    transform: rotateY(180deg);
+    transition: 1s;
+    perspective: 1000px;
+}
+
+@media screen and (max-width: 1000px) {
+    .header {
+        background: unset;
+        padding: unset;
+        margin-bottom: 2rem;
+    }
+    .logo {
+        width: 80%;
+        height: 350px;
+    }
+    .link {
+        font-size: 1rem;
+        font-weight: 700;
+        color: black;
+    }
+    .basket {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+}
+
+.footer {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(14, 103, 143);
+    margin-top: 5rem;
+}

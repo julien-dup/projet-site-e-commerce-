@@ -12,18 +12,18 @@
 </head>
 
 <body>
-    <div class="header">
-        <div class="title">
-            <h1>Power Airlines</h1>
-        </div>
-        <div class="categorie">
-            <a href="#" id="franceBtn">France</a>
-            <a href="#" id="europeBtn">Europe</a>
-            <a href="#" id="mondeBtn">Monde</a>
-            <button type="button" id="panierBtn" class="btn btn-primary panier" data-bs-toggle="modal"
-                data-bs-target="#panierModal"></button>
-        </div>
-    </div>
+    <!-- Navbar-->
+    <header class="header">
+        <nav class="menu">
+            <img src="./assets/img/logo.png" alt="Logo" class="logo">
+            <a href="#" id="franceBtn" class="franceBtn link">France</a>
+            <a href="#" id="europeBtn" class="europeBtn link">Europe</a>
+            <a href="#" id="mondeBtn" class="mondeBtn link">Monde</a>
+            <button type="button" id="panierBtn" class="btn basket" data-bs-toggle="modal" data-bs-target="#panierModal">
+                <i class="bi bi-basket"></i>
+            </button>
+        </nav>
+    </header>
 
     <div class="container-fluid">
         <div id="mainContainer" class="row">
@@ -62,8 +62,24 @@
         </div>
     </div>
 
+    <footer class="footer">
+        <div class="powerLogo">
+            <img src="./assets/img/powerLogo.png" alt="Power Logo" width="100px" >
+        </div>
 
-    
+        <ul class="list-unstyled">
+            <li>Téléphone</li>
+            <li>Adresse</li>
+            <li>Mail</li>
+        </ul>
+
+        <ul class="list-unstyled">
+            <li>Réseaux</li>
+            <li>Insta</li>
+            <li>Facebook</li>
+            <li>...</li>
+        </ul>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script src="./assets/js/fetch.js"></script>

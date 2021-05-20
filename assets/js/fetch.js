@@ -38,38 +38,36 @@ function displayFrance() {
 
             allBtns.forEach(element => {
                 element.addEventListener("click", function () {
-                    var myQuantite = 1;
                     let name = this.dataset.name;
                     let duration = this.dataset.duration;
                     let price = this.dataset.price;
-                    console.log(name);
 
-                    tableau.innerHTML += `
+                    tableau.insertAdjacentHTML('afterbegin' , `
                     <tr>
                     <th>${name}</th>
                     <td>${duration}</td>
                     <td><button class="minusBtn" data-value="minus">-</button><button class="plusBtn" data-value="plus">+</button></td>
-                    <td><div data-value="quantite">${myQuantite}</div></td>
+                    <td><span data-value="quantite">1</span></td>
                     <td>${price}&euro;</td>
-                    </tr>`
+                    </tr>`);
 
                     // fonction qui va supprimer et ajouter la quantité de services
-                    var minusBtn = document.querySelectorAll("button[data-]")
-                    var plusBtn = document.querySelectorAll("button[data-plus]")
-                    suppr.forEach(element => {
+                    const minusBtn = document.querySelectorAll('button[data-value="minus"]');
+                    const plusBtn = document.querySelectorAll('button[data-value="plus"]');
+                    const mySpan = document.querySelectorAll('span[data-value="quantite"]');
+
+                    let myQuantite = 1;
+                    
+                    minusBtn.forEach(element => {
                         element.addEventListener("click", function () {
-                            let soustrait = parseInt(this.dataset.minus)
-                            var resultatA = (calculA + soustrait);
-                            calculA = eval(resultatA);
-                            console.log(calculA)
-                        })
+                            myQuantite--;
+                            mySpan[0].innerHTML = myQuantite;
+                        });
                     })
-                    ajouter.forEach(element => {
+                    plusBtn.forEach(element => {
                         element.addEventListener("click", function () {
-                            let ajoute = parseInt(this.dataset.plus)
-                            var resultatB = (calculA + ajoute);
-                            calculA = eval(resultatB);
-                            console.log(calculA)
+                            myQuantite++;
+                            mySpan[0].innerHTML = myQuantite;
                         })
                     })
                 })

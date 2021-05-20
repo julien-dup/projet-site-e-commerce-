@@ -51,11 +51,41 @@ function displayFrance() {
            <tr>
            <th>${name}</th>
            <td>${duration}</td>
-           <td><button class="minusBtn">-</button> 1 <button class="plusBtn">+</button></td>
+           <td><button class="minusBtn" data-minus="-1">-</button> 1 <button class="plusBtn" data-plus="+1">+</button></td>
            <td>${price}euro;</td>
            </tr>`
+
+                           // fonction qui va supprimer et ajouter la quantité
+        var calculA = 1
+                           var suppr= document.querySelectorAll("button[data-minus]")
+                           var ajouter= document.querySelectorAll("button[data-plus]")
+                           suppr.forEach (element => {
+                           element.addEventListener("click", function(){
+                        
+                               let soustrait = parseInt(this.dataset.minus)
+                               let ajoute = parseInt(this.dataset.plus)
+                               console.log(typeof soustrait)
+                               var resultatA= (1 + soustrait);
+                               calculA= eval(resultatA);
+                               console.log(calculA)
+
+                           })
+                       })
+                       ajouter.forEach (element => {
+                        element.addEventListener("click", function(){
+                     
+                            let soustrait = parseInt(this.dataset.minus)
+                            let ajoute = parseInt(this.dataset.plus)
+                            console.log(typeof ajoute)
+                            var resultatB= (1 + ajoute);
+                            console.log(resultat)
+
+                        })
+                    })
         })
     })
+
+
 
     }).catch(function (error) {
         console.log("Erreur : " + error);
@@ -164,6 +194,8 @@ function displayMonde() {
 
     console.log(b)
 
+
+
     b.forEach (element => {
         console.log("pp")
         element.addEventListener ("click", function (){
@@ -178,11 +210,14 @@ function displayMonde() {
            <tr>
            <th>${name}</th>
            <td>${duration}</td>
-           <td><button class="minusBtn">-</button> 1 <button class="plusBtn">+</button></td>
+           <td><button class="minusBtn" data-minus="minus">-</button> 1 <button class="plusBtn" data-plus="plus">+</button></td>
            <td>${price}euro;</td>
            </tr>`
         })
+
     })
+
+
 
     }).catch(function (error) {
         console.log("Erreur : " + error);

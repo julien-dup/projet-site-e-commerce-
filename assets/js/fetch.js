@@ -26,13 +26,36 @@ function displayFrance() {
                     <div class="col-3 d-flex justify-content-center">
                         <div class="row">
                             <p class="card-title  text-center">${element.price} euros</p>
-                            <button class="button1" type="button" data-name="${element.name}" class=" btn btn-danger">Ajouter</button>
+                            <button class="button1" type="button" data-name="${element.name}" data-duration="${element.duration}" data-price="${element.price}" class=" btn btn-danger">Ajouter</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>`
     });
+    let b = document.querySelectorAll("button[data-name]")
+
+    console.log(b)
+
+    b.forEach (element => {
+        console.log("pp")
+        element.addEventListener ("click", function (){
+            console.log("ok")
+          let name = this.dataset.name
+          let duration = this.dataset.duration
+          let price = this.dataset.price
+           console.log(name)
+           
+           let tableau = document.getElementById("tableau")
+           tableau.innerHTML += `
+           <tr>
+           <th>${name}</th>
+           <td>${duration}</td>
+           <td><button class="minusBtn">-</button> 1 <button class="plusBtn">+</button></td>
+           <td>${price}euro;</td>
+           </tr>`
+        })
+    })
 
     }).catch(function (error) {
         console.log("Erreur : " + error);
@@ -67,13 +90,36 @@ function displayEurope() {
                         <div class="col-3 d-flex justify-content-center">
                             <div class="row">
                                 <p class="card-title  text-center">${element.price} euros</p>
-                                <button class="button1" type="button" data-name="${element.name}" class=" btn btn-danger">Ajouter</button>
+                                <button class="button1" type="button" data-name="${element.name}" data-duration="${element.duration}" data-price="${element.price}" class=" btn btn-danger">Ajouter</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>`
         });
+        let b = document.querySelectorAll("button[data-name]")
+
+        console.log(b)
+    
+        b.forEach (element => {
+            console.log("pp")
+            element.addEventListener ("click", function (){
+                console.log("ok")
+              let name = this.dataset.name
+              let duration = this.dataset.duration
+              let price = this.dataset.price
+               console.log(name)
+               
+               let tableau = document.getElementById("tableau")
+               tableau.innerHTML += `
+               <tr>
+               <th>${name}</th>
+               <td>${duration}</td>
+               <td><button class="minusBtn">-</button> 1 <button class="plusBtn">+</button></td>
+               <td>${price}euro;</td>
+               </tr>`
+            })
+        })
 
     }).catch(function (error) {
         console.log("Erreur : " + error);
@@ -91,7 +137,6 @@ function displayMonde() {
             console.log("Erreur JSON");
         }
     }).then(function (data) {
-
     data.results.forEach(element => {
         mainContainer.innerHTML += `
         <div class="col-md-5 col-lg-4 pt-2 rounded-3 text-center">
@@ -108,15 +153,14 @@ function displayMonde() {
                     <div class="col-3 d-flex justify-content-center">
                         <div class="row">
                             <p class="card-title  text-center">${element.price} euros</p>
-                            <button class="button1" type="button" data-name="${element.name}" class=" btn btn-danger">Ajouter</button>
+                            <button class="button1" type="button" data-name="${element.name}" data-duration="${element.duration}" data-price="${element.price}" class=" btn btn-danger">Ajouter</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>`
     });
-
-        let b = document.querySelectorAll("button")
+    let b = document.querySelectorAll("button[data-name]")
 
     console.log(b)
 
@@ -125,10 +169,18 @@ function displayMonde() {
         element.addEventListener ("click", function (){
             console.log("ok")
           let name = this.dataset.name
+          let duration = this.dataset.duration
+          let price = this.dataset.price
            console.log(name)
-           window.alert("votre voyage a été ajouté au panier")
-           let modale = document.getElementById("panierModal")
            
+           let tableau = document.getElementById("tableau")
+           tableau.innerHTML += `
+           <tr>
+           <th>${name}</th>
+           <td>${duration}</td>
+           <td><button class="minusBtn">-</button> 1 <button class="plusBtn">+</button></td>
+           <td>${price}euro;</td>
+           </tr>`
         })
     })
 

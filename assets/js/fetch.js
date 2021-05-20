@@ -26,7 +26,7 @@ function displayFrance() {
                     <div class="col-3 d-flex justify-content-center">
                         <div class="row">
                             <p class="card-title  text-center">${element.price} euros</p>
-                            <button class="button1" type="button" class=" btn btn-danger">Ajouter</button>
+                            <button class="button1" type="button" data-value="${element.name}" class=" btn btn-danger">Ajouter</button>
                         </div>
                     </div>
                 </div>
@@ -67,7 +67,7 @@ function displayEurope() {
                         <div class="col-3 d-flex justify-content-center">
                             <div class="row">
                                 <p class="card-title  text-center">${element.price} euros</p>
-                                <button class="button1" type="button" class=" btn btn-danger">Ajouter</button>
+                                <button class="button1" type="button" data-value="${element.name}" class=" btn btn-danger">Ajouter</button>
                             </div>
                         </div>
                     </div>
@@ -108,13 +108,24 @@ function displayMonde() {
                     <div class="col-3 d-flex justify-content-center">
                         <div class="row">
                             <p class="card-title  text-center">${element.price} euros</p>
-                            <button class="button1" type="button" class=" btn btn-danger">Ajouter</button>
+                            <button class="button1" type="button" data-value="${element.name}" class=" btn btn-danger">Ajouter</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>`
     });
+
+        let b = document.querySelectorAll("button")
+
+    console.log(b)
+
+    b.forEach (element => {
+        console.log("pp")
+        element.addEventListener ("click", function (){
+            console.log("ok")
+        })
+    })
 
     }).catch(function (error) {
         console.log("Erreur : " + error);
@@ -134,3 +145,5 @@ europeBtn.addEventListener('click', () => {
 mondeBtn.addEventListener('click', () => {
     displayMonde();
 })
+
+

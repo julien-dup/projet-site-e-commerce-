@@ -36,42 +36,48 @@ function displayFrance() {
 
             let allBtns = document.querySelectorAll("button[data-name]")
 
-            allBtns.forEach(element => {
-                element.addEventListener("click", function () {
-                    let name = this.dataset.name;
-                    let duration = this.dataset.duration;
-                    let price = this.dataset.price;
+allBtns.forEach(element => {
+    element.addEventListener("click", function () {
 
-                    tableau.insertAdjacentHTML('afterbegin' , `
-                    <tr>
-                    <th>${name}</th>
-                    <td>${duration}</td>
-                    <td><button class="minusBtn" data-value="minus">-</button><button class="plusBtn" data-value="plus">+</button></td>
-                    <td><span data-value="quantite">1</span></td>
-                    <td>${price}&euro;</td>
-                    </tr>`);
+        let name = this.dataset.name;
+        let duration = this.dataset.duration;
+        let price = this.dataset.price;
 
-                    // fonction qui va supprimer et ajouter la quantité de services
-                    const minusBtn = document.querySelectorAll('button[data-value="minus"]');
-                    const plusBtn = document.querySelectorAll('button[data-value="plus"]');
-                    const mySpan = document.querySelectorAll('span[data-value="quantite"]');
+        let myQuantite = 1;
+        //let count = 0;
 
-                    let myQuantite = 1;
-                    
-                    minusBtn.forEach(element => {
-                        element.addEventListener("click", function () {
-                            myQuantite--;
-                            mySpan[0].innerHTML = myQuantite;
-                        });
-                    })
-                    plusBtn.forEach(element => {
-                        element.addEventListener("click", function () {
-                            myQuantite++;
-                            mySpan[0].innerHTML = myQuantite;
-                        })
-                    })
-                })
-            })
+        tableau.insertAdjacentHTML('afterbegin', `
+        <tr>
+        <th>${name}</th>
+        <td>${duration}</td>
+        <td><button class="minusBtn ${count}" data-name="minus" data-value="quantite">-</button><button class="plusBtn ${count}" data-name="plus" data-value="quantite">+</button></td>
+        <td><span data-value="quantite">${myQuantite}</span></td>
+        <td>${price}&euro;</td>
+        </tr>`);
+
+        const minusBtn = document.querySelectorAll('button[data-name="minus"]');
+        const plusBtn = document.querySelectorAll('button[data-name="plus"]');
+        const mySpan = document.querySelectorAll('span[data-value="quantite"]');
+        //const plusAndMinus = document.getElementsByClassName(count);
+
+        minusBtn.forEach(element => {
+            element.addEventListener("click", function () {
+                myQuantite--;
+                console.log(myQuantite);
+            });
+        })
+        plusBtn.forEach(element => {
+            element.addEventListener("click", function () {
+                myQuantite++;
+                console.log(myQuantite);
+            });
+        })
+
+        
+
+        //count++;
+    })
+})
 
         }).catch(function (error) {
             console.log("Erreur : " + error);
@@ -92,26 +98,26 @@ function displayEurope() {
 
             data.results.forEach(element => {
                 mainContainer.innerHTML += `
-            <div class="col-md-5 col-lg-4 pt-2 rounded-3 text-center">
-                <div class="card" style="width: 100%">
-                    <img src="${element.photo}" class="card-img-top" alt="Image de la destination">
+                <div class="col-md-5 col-lg-4 pt-2 rounded-3 text-center">
+                    <div class="card" style="width: 100%">
+                        <img src="${element.photo}" class="card-img-top" alt="Image de la destination">
 
-                    <div class="card-body row">
-                        <h5 class="card-title text-start fontsize1">${element.name} / ${element.duration}</h5>
+                        <div class="card-body row">
+                            <h5 class="card-title text-start fontsize1">${element.name} / ${element.duration}</h5>
 
-                        <div class="col-9">
-                            <p class="card-text text-start description">${element.description}</p>
-                        </div>
+                            <div class="col-9">
+                                <p class="card-text text-start description">${element.description}</p>
+                            </div>
 
-                        <div class="col-3 d-flex justify-content-center">
-                            <div class="row">
-                                <p class="card-title  text-center">${element.price} euros</p>
-                                <button class="button1" type="button" data-name="${element.name}" data-duration="${element.duration}" data-price="${element.price}" class=" btn btn-danger">Ajouter</button>
+                            <div class="col-3 d-flex justify-content-center">
+                                <div class="row">
+                                    <p class="card-title  text-center">${element.price} euros</p>
+                                    <button class="button1" type="button" data-name="${element.name}" data-duration="${element.duration}" data-price="${element.price}" class=" btn btn-danger">Ajouter</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>`
+                </div>`
             });
             let b = document.querySelectorAll("button[data-name]")
 

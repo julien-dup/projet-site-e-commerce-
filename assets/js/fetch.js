@@ -71,6 +71,9 @@ function displayFrance() {
                                     console.log(calculA)
                                     let mySpan = document.querySelectorAll('span');
                                     mySpan.innerHTML = "toto";
+                                    if (calculA == 0) {
+                                        document.querySelectorAll("th[data-name]").remove
+                                    }
                                 })
                             })
                        ajouter.forEach (element => {
@@ -136,6 +139,7 @@ function displayEurope() {
               let name = this.dataset.name
               let duration = this.dataset.duration
               let price = this.dataset.price
+            
                console.log(name)
                
                let tableau = document.getElementById("tableau")
@@ -161,6 +165,9 @@ function displayEurope() {
             calculA= eval(resultatA);
             console.log(calculA)
             affiche.innerHTML(calculA)
+            // if (calculA == 0) {
+            //     remove.
+            // }
             
               })
              })
@@ -239,26 +246,26 @@ function displayMonde() {
            <td>${price}euro;</td>
            </tr>`
 
-                                           // fonction qui va supprimer et ajouter la quantité de services
-                                           var calculA = 1
-                                           var suppr= document.querySelectorAll("button[data-minus]")
-                                           var ajouter= document.querySelectorAll("button[data-plus]")
-                                           suppr.forEach (element => {
-                                           element.addEventListener("click", function(){
-                                               let soustrait = parseInt(this.dataset.minus)
-                                               var resultatA= (calculA + soustrait);
-                                               calculA= eval(resultatA);
-                                               console.log(calculA)
-                                                 })
+                                            // fonction qui va supprimer et ajouter la quantité de services
+                                            var calculA = 1
+                                            var suppr= document.querySelectorAll("button[data-minus]")
+                                            var ajouter= document.querySelectorAll("button[data-plus]")
+                                            suppr.forEach (element => {
+                                            element.addEventListener("click", function(){
+                                                let soustrait = parseInt(this.dataset.minus)
+                                                var resultatA= (calculA + soustrait);
+                                                calculA= eval(resultatA);
+                                                console.log(calculA)
+                                                    })
+                                                    })
+                                        ajouter.forEach (element => {
+                                            element.addEventListener("click", function(){
+                                                let ajoute = parseInt(this.dataset.plus)
+                                                var resultatB= (calculA + ajoute);
+                                                calculA= eval(resultatB);
+                                                console.log(calculA)
                                                 })
-                                       ajouter.forEach (element => {
-                                        element.addEventListener("click", function(){
-                                            let ajoute = parseInt(this.dataset.plus)
-                                            var resultatB= (calculA + ajoute);
-                                            calculA= eval(resultatB);
-                                            console.log(calculA)
-                                            })
-                                             })
+                                                })
 
 
         })

@@ -1,6 +1,7 @@
 {
     "results" : [
         {
+            "reference" : "07",
             "name" : "Espagne",
             "photo" : "https://content.tui.fr/GroupImages/groupimage_723ae477-062e-4abb-b74b-6920dca7d655.jpg?i10c=img.resize(width:300)&frz-v=49",
             "description" : "Pays européen situé sur la péninsule ibérique et comprenant 17 régions autonomes à la géographie et aux cultures diverses.",
@@ -8,6 +9,7 @@
             "price" : 1000
         },
         {
+            "reference" : "08",
             "name" : "Ecosse",
             "photo" : "https://content.tui.fr/GroupImages/groupimage_f6727bab-8966-4d06-a085-20ba9a966818.jpg?i10c=img.resize(width:300)&frz-v=49",
             "description" : "L'Écosse, nation la plus au nord du Royaume-Uni, comprend des régions sauvages montagneuses telles que les Cairngorms et les Northwest Highlands.",
@@ -15,6 +17,7 @@
             "price" : 1000
         },
         {
+            "reference" : "09",
             "name" : "Grèce",
             "photo" : "https://content.tui.fr/GroupImages/groupimage_723ae477-062e-4abb-b74b-6920dca7d655.jpg?i10c=img.resize(width:300)&frz-v=49",
             "description" : "La Grèce est un pays du sud-est de l'Europe, composé de milliers d'îles parsemant les mers Égée et Ionienne.",
@@ -22,6 +25,7 @@
             "price" : 1000
         },
         {
+            "reference" : "10",
             "name" : "Italie",
             "photo" : "https://content.tui.fr/GroupImages/groupimage_85d226d2-8fce-48b4-9af0-52a7825c995e.jpg?i10c=img.resize(width:300)&frz-v=49",
             "description" : "L'Italie, pays européen bordé par la Méditerranée et l'Adriatique, a laissé une forte empreinte sur la culture et la cuisine occidentales.",
@@ -29,6 +33,7 @@
             "price" : 1000
         },
         {
+            "reference" : "11",
             "name" : "Portugal",
             "photo" : "https://content.tui.fr/GroupImages/groupimage_d1d7f46c-91b5-46bb-9d97-6d6b636074b5.jpg?i10c=img.resize(width:300)&frz-v=49",
             "description" : "Le Portugal est un pays du sud de l'Europe, sur la péninsule Ibérique, délimité en partie par l'Espagne.",
@@ -36,6 +41,7 @@
             "price" : 1000
         },
         {
+            "reference" : "12",
             "name" : "Chypre",
             "photo" : "https://content.tui.fr/GroupImages/groupimage_98d1270e-c29a-4edf-8b12-9efb870a5a17.jpg?i10c=img.resize(width:300)&frz-v=49",
             "description" : "La République de Chypre occupe la partie sud de l’île de Chypre, dans l’est de la mer Méditerranée.",

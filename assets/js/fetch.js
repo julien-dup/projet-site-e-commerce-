@@ -1,3 +1,12 @@
+function getTotal() {
+    let total = 0;
+    let allInputSub = document.querySelectorAll('.subTotal');
+    allInputSub.forEach(element => {
+        total += +(element.value)
+    });
+    totalPrice.innerHTML = total + " &euro;";
+}
+
 function displayFrance() {
     mainContainer.innerHTML = "";
 
@@ -34,7 +43,7 @@ function displayFrance() {
                 </div>`
             });
 
-            let allBtns = document.querySelectorAll("button[data-name]")
+            let allBtns = document.querySelectorAll("button[data-name]");
 
             allBtns.forEach(element => {
                 element.addEventListener("click", function () {
@@ -46,36 +55,45 @@ function displayFrance() {
                     let myQuantite = 1;
                     let count = 0;
 
-                    tableau.insertAdjacentHTML('afterbegin', `
-                    <tr id="${name}">
-                    <th>${name}</th>
-                    <td>${duration}</td>
-                    <td><button class="minusBtn" data-name="minus">-</button><button class="plusBtn" data-name="plus">+</button></td>
-                    <td><span class="spanBtn">${myQuantite}</span></td>
-                    <td>${price}&euro;</td>
-                    </tr>`);
+                    if (!document.getElementById(name)) {
+                        tableau.insertAdjacentHTML('afterbegin', `
+                        <tr id="${name}">
+                        <th>${name}</th>
+                        <td>${duration}</td>
+                        <td><button class="minusBtn" data-name="minus">-</button><button class="plusBtn" data-name="plus">+</button></td>
+                        <td><span class="spanBtn">${myQuantite}</span></td>
+                        <td>${price} &euro;</td>
+                        <td><input type="number" class="subTotal" value="${price}" disabled>&euro;</td>
+                        </tr>`);
+                    }
 
                     let minusBtn = document.getElementsByClassName("minusBtn")[count];
                     let plusBtn = document.getElementsByClassName("plusBtn")[count];
-                    let spanBtn = document.getElementsByClassName("spanBtn")[count];
+                    let spanQuantite = document.getElementsByClassName("spanBtn")[count];
+                    let subTotal = document.getElementsByClassName("subTotal")[count];
 
                     minusBtn.addEventListener('click', () => {
                         myQuantite--;
-                        spanBtn.innerHTML = myQuantite;
                         if (myQuantite <= 0) {
                             let del = document.getElementById(name);
                             del.remove();
                         }
-                    })
-                    
+                        spanQuantite.innerHTML = myQuantite;
+                        subTotal.value = myQuantite * price;
+                        getTotal();
+                    });
+
                     plusBtn.addEventListener('click', () => {
                         myQuantite++;
-                        spanBtn.innerHTML = myQuantite;
-                    })
+                        spanQuantite.innerHTML = myQuantite;
+                        subTotal.value = myQuantite * price;
+                        getTotal();
+                    });
 
+                    getTotal();
                     count++;
                 })
-            })
+            });
 
         }).catch(function (error) {
             console.log("Erreur : " + error);
@@ -117,50 +135,58 @@ function displayEurope() {
                     </div>
                 </div>`
             });
-            let b = document.querySelectorAll("button[data-name]")
 
-            console.log(b)
+            let allBtns = document.querySelectorAll("button[data-name]");
 
-            b.forEach(element => {
-                console.log("pp")
+            allBtns.forEach(element => {
                 element.addEventListener("click", function () {
-                    console.log("ok")
-                    let name = this.dataset.name
-                    let duration = this.dataset.duration
-                    let price = this.dataset.price
-                    console.log(name)
 
-                    let tableau = document.getElementById("tableau")
-                    tableau.innerHTML += `
-                    <tr>
-                    <th>${name}</th>
-                    <td>${duration}</td>
-                    <td><button class="minusBtn" data-minus="-1">-</button> 1 <button class="plusBtn" data-plus="+1">+</button></td>
-                    <td>${price}euro;</td>
-                    </tr>`
+                    let name = this.dataset.name;
+                    let duration = this.dataset.duration;
+                    let price = this.dataset.price;
 
-                    // fonction qui va supprimer et ajouter la quantité de services
-                    var calculA = 1
-                    var suppr = document.querySelectorAll("button[data-minus]")
-                    var ajouter = document.querySelectorAll("button[data-plus]")
-                    suppr.forEach(element => {
-                        element.addEventListener("click", function () {
-                            let soustrait = parseInt(this.dataset.minus)
-                            var resultatA = (calculA + soustrait);
-                            calculA = eval(resultatA);
-                            console.log(calculA)
-                        })
-                    })
-                    ajouter.forEach(element => {
-                        element.addEventListener("click", function () {
-                            let ajoute = parseInt(this.dataset.plus)
-                            var resultatB = (calculA + ajoute);
-                            calculA = eval(resultatB);
-                            console.log(calculA)
-                        })
-                    })
+                    let myQuantite = 1;
+                    let count = 0;
+
+                    if (!document.getElementById(name)) {
+                        tableau.insertAdjacentHTML('afterbegin', `
+                        <tr id="${name}">
+                        <th>${name}</th>
+                        <td>${duration}</td>
+                        <td><button class="minusBtn" data-name="minus">-</button><button class="plusBtn" data-name="plus">+</button></td>
+                        <td><span class="spanBtn">${myQuantite}</span></td>
+                        <td>${price} &euro;</td>
+                        <td><input type="number" class="subTotal" value="${price}" disabled>&euro;</td>
+                        </tr>`);
+                    }
+
+                    let minusBtn = document.getElementsByClassName("minusBtn")[count];
+                    let plusBtn = document.getElementsByClassName("plusBtn")[count];
+                    let spanQuantite = document.getElementsByClassName("spanBtn")[count];
+                    let subTotal = document.getElementsByClassName("subTotal")[count];
+
+                    minusBtn.addEventListener('click', () => {
+                        myQuantite--;
+                        if (myQuantite <= 0) {
+                            let del = document.getElementById(name);
+                            del.remove();
+                        }
+                        spanQuantite.innerHTML = myQuantite;
+                        subTotal.value = myQuantite * price;
+                        getTotal();
+                    });
+
+                    plusBtn.addEventListener('click', () => {
+                        myQuantite++;
+                        spanQuantite.innerHTML = myQuantite;
+                        subTotal.value = myQuantite * price;
+                        getTotal();
+                    });
+
+                    getTotal();
+                    count++;
                 })
-            })
+            });
 
         }).catch(function (error) {
             console.log("Erreur : " + error);
@@ -201,45 +227,57 @@ function displayMonde() {
                     </div>
                 </div>`
             });
-            let myButtons = document.querySelectorAll("button[data-name]")
+            let allBtns = document.querySelectorAll("button[data-name]");
 
-            myButtons.forEach(element => {
+            allBtns.forEach(element => {
                 element.addEventListener("click", function () {
-                    let name = this.dataset.name
-                    let duration = this.dataset.duration
-                    let price = this.dataset.price
 
-                    let tableau = document.getElementById("tableau")
-                    tableau.innerHTML += `
-                    <tr>
-                    <th>${name}</th>
-                    <td>${duration}</td>
-                    <td><button class="minusBtn" data-minus="-1">-</button> <span class="mySpan"></span> <button class="plusBtn" data-plus="+1">+</button></td>
-                    <td>${price}euro;</td>
-                    </tr>`
+                    let name = this.dataset.name;
+                    let duration = this.dataset.duration;
+                    let price = this.dataset.price;
 
-                    // fonction qui va supprimer et ajouter la quantité de services
-                    var calculA = 1
-                    var suppr = document.querySelectorAll("button[data-minus]")
-                    var ajouter = document.querySelectorAll("button[data-plus]")
-                    suppr.forEach(element => {
-                        element.addEventListener("click", function () {
-                            let soustrait = parseInt(this.dataset.minus)
-                            var resultatA = (calculA + soustrait);
-                            calculA = eval(resultatA);
-                            console.log(calculA)
-                        });
+                    let myQuantite = 1;
+                    let count = 0;
+
+                    if (!document.getElementById(name)) {
+                        tableau.insertAdjacentHTML('afterbegin', `
+                        <tr id="${name}">
+                        <th>${name}</th>
+                        <td>${duration}</td>
+                        <td><button class="minusBtn" data-name="minus">-</button><button class="plusBtn" data-name="plus">+</button></td>
+                        <td><span class="spanBtn">${myQuantite}</span></td>
+                        <td>${price} &euro;</td>
+                        <td><input type="number" class="subTotal" value="${price}" disabled>&euro;</td>
+                        </tr>`);
+                    }
+
+                    let minusBtn = document.getElementsByClassName("minusBtn")[count];
+                    let plusBtn = document.getElementsByClassName("plusBtn")[count];
+                    let spanQuantite = document.getElementsByClassName("spanBtn")[count];
+                    let subTotal = document.getElementsByClassName("subTotal")[count];
+
+                    minusBtn.addEventListener('click', () => {
+                        myQuantite--;
+                        if (myQuantite <= 0) {
+                            let del = document.getElementById(name);
+                            del.remove();
+                        }
+                        spanQuantite.innerHTML = myQuantite;
+                        subTotal.value = myQuantite * price;
+                        getTotal();
                     });
-                    ajouter.forEach(element => {
-                        element.addEventListener("click", function () {
-                            let ajoute = parseInt(this.dataset.plus)
-                            var resultatB = (calculA + ajoute);
-                            calculA = eval(resultatB);
-                            console.log(calculA)
-                        });
+
+                    plusBtn.addEventListener('click', () => {
+                        myQuantite++;
+                        spanQuantite.innerHTML = myQuantite;
+                        subTotal.value = myQuantite * price;
+                        getTotal();
                     });
+
+                    getTotal();
+                    count++;
                 })
-            })
+            });
 
         }).catch(function (error) {
             console.log("Erreur : " + error);

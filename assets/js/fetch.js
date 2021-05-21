@@ -36,48 +36,46 @@ function displayFrance() {
 
             let allBtns = document.querySelectorAll("button[data-name]")
 
-allBtns.forEach(element => {
-    element.addEventListener("click", function () {
+            allBtns.forEach(element => {
+                element.addEventListener("click", function () {
 
-        let name = this.dataset.name;
-        let duration = this.dataset.duration;
-        let price = this.dataset.price;
+                    let name = this.dataset.name;
+                    let duration = this.dataset.duration;
+                    let price = this.dataset.price;
 
-        let myQuantite = 1;
-        //let count = 0;
+                    let myQuantite = 1;
+                    let count = 0;
 
-        tableau.insertAdjacentHTML('afterbegin', `
-        <tr>
-        <th>${name}</th>
-        <td>${duration}</td>
-        <td><button class="minusBtn ${count}" data-name="minus" data-value="quantite">-</button><button class="plusBtn ${count}" data-name="plus" data-value="quantite">+</button></td>
-        <td><span data-value="quantite">${myQuantite}</span></td>
-        <td>${price}&euro;</td>
-        </tr>`);
+                    tableau.insertAdjacentHTML('afterbegin', `
+                    <tr id="${name}">
+                    <th>${name}</th>
+                    <td>${duration}</td>
+                    <td><button class="minusBtn" data-name="minus">-</button><button class="plusBtn" data-name="plus">+</button></td>
+                    <td><span class="spanBtn">${myQuantite}</span></td>
+                    <td>${price}&euro;</td>
+                    </tr>`);
 
-        const minusBtn = document.querySelectorAll('button[data-name="minus"]');
-        const plusBtn = document.querySelectorAll('button[data-name="plus"]');
-        const mySpan = document.querySelectorAll('span[data-value="quantite"]');
-        //const plusAndMinus = document.getElementsByClassName(count);
+                    let minusBtn = document.getElementsByClassName("minusBtn")[count];
+                    let plusBtn = document.getElementsByClassName("plusBtn")[count];
+                    let spanBtn = document.getElementsByClassName("spanBtn")[count];
 
-        minusBtn.forEach(element => {
-            element.addEventListener("click", function () {
-                myQuantite--;
-                console.log(myQuantite);
-            });
-        })
-        plusBtn.forEach(element => {
-            element.addEventListener("click", function () {
-                myQuantite++;
-                console.log(myQuantite);
-            });
-        })
+                    minusBtn.addEventListener('click', () => {
+                        myQuantite--;
+                        spanBtn.innerHTML = myQuantite;
+                        if (myQuantite <= 0) {
+                            let del = document.getElementById(name);
+                            del.remove();
+                        }
+                    })
+                    
+                    plusBtn.addEventListener('click', () => {
+                        myQuantite++;
+                        spanBtn.innerHTML = myQuantite;
+                    })
 
-        
-
-        //count++;
-    })
-})
+                    count++;
+                })
+            })
 
         }).catch(function (error) {
             console.log("Erreur : " + error);

@@ -196,7 +196,7 @@ section .wave.wave1 {
         background-position-x: 0;
     }
     100% {
-        background-position-x: 6000px;
+        background-position-x: -6000px;
     }
 }
 section .wave.wave2 {
@@ -213,7 +213,7 @@ section .wave.wave2 {
         background-position-x: 0;
     }
     100% {
-        background-position-x: -6000px;
+        background-position-x: 6000px;
     }
 }
 

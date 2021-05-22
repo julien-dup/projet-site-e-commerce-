@@ -26,6 +26,13 @@
         </nav>
     </header>
 
+    <section>
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+    </section>
+
     <div class="container-fluid">
         <div id="mainContainer" class="row">
         </div>
@@ -46,13 +53,21 @@
                             <tr>
                                 <th scope="col">Ville</th>
                                 <th scope="col">Durée</th>
-                                <th scope="col">Ajout/Suppr</th>
-                                <th scope="col">Quantité</th>
-                                <th scope="col">Prix</th>
+                                <th scope="col">Ajouter/Supprimer</th>
+                                <th scope="col">Nb Voyageurs</th>
+                                <th scope="col">Prix unitaire</th>
+                                <th scope="col">Sous total</th>
                             </tr>
                         </thead>
                         <tbody id="tableau">
+
                         </tbody>
+                        <tfoot>
+                            <th scope="col" colspan="4"></th>
+                            <th scope="col">Total</th>
+                            <td scope="col" id="totalPrice"></td>
+                        </tfoot>
+
                     </table>
                 </div>
                 <div class="modal-footer">

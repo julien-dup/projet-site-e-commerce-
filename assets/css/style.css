@@ -27,6 +27,8 @@
 
 .fontsize1 {
     color: rgb(238, 215, 12);
+    font-size: 2.5rem;
+    text-shadow: black 3px 3px;
 }
 
 .description {
@@ -57,8 +59,10 @@
 }
 
 .header {
-    margin-bottom: 5rem;
+    /* margin-bottom: 5rem; */
     background-color: rgb(14, 103, 143);
+    /* background: url(../img/ciel\ bleu.jpg) no-repeat; */
+    background-size: 100%;
     background-position: 50% 80%;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -110,7 +114,7 @@
     .header {
         background: unset;
         padding: unset;
-        margin-bottom: 2rem;
+        margin-bottom: 0rem;
     }
     .logo {
         width: 80%;
@@ -134,4 +138,118 @@
     align-items: center;
     background: rgb(14, 103, 143);
     margin-top: 5rem;
+}
+
+
+/* Julien GLASS MORPHISM */
+
+.card{
+background: rgba(255, 254, 254, 0.3);
+border-left: 1px solid rgb(255, 255, 255, .3);
+border-top: 1px solid rgb(255, 255, 255, .3);
+filter:brightness(10px);
+/* -webkit-backdrop-filter: blur(10px); */
+box-shadow: 20px 20px 40px -6px rgb(0,0,0, .2);
+border-radius: 10%;
+margin-bottom: 40px;
+}
+
+body {
+    background: linear-gradient(45deg,#FFF67B, #D04B00, #4D0D1D, #41204D, #201E5D, #0639F3, #069EF3);
+    /* background: linear-gradient(45deg,#DFB98A, #DFB98A, #BCCCDC, #79B7D0, #298EB8, #1473B7, #6BC4FE); */
+    /* background: url("../img/ciel3.jpg")  no-repeat center; */
+    background-size: 100%;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+
+/* Julien EFFET WAVY */
+
+section {
+    position: relative;
+    width: 100vw;
+    height: 189px;
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+
+section .wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 189px;
+    width: 100%;
+    background-size: 100%;
+    background: url("../img/Vector\ 1.svg") center ;
+}
+
+section .wave.wave1 {
+     /* transform: rotate(180deg); */
+     animation: animate 60s linear infinite;
+     z-index: 1000;
+     opacity: 1;
+     animation-delay: 0s;
+}
+
+@keyframes animate {
+    0%{
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 6000px;
+    }
+}
+section .wave.wave2 {
+    /* transform: rotate(180deg); */
+    animation: animate2 45s linear infinite;
+    z-index: 900;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+
+@keyframes animate2 {
+    0%{
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -6000px;
+    }
+}
+
+section .wave.wave3 {
+    /* transform: rotate(180deg); */
+    animation: animate2 45s linear infinite;
+    z-index: 800;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+}
+
+section .wave.wave3 {
+    /* transform: rotate(180deg); */
+    animation: animate2 45s linear infinite;
+    z-index: 700;
+    opacity: 0.7;
+    animation-delay: -2s;
+    bottom: 20px;
+}
+/* CSS TEXTE */
+.card-text {
+    font-size: 1.5rem;
+    text-shadow: black 3px px;
+    font-weight: 500;
+}
+
+.card-title {
+    font-size: 2rem;
+    text-shadow: rgb(7, 7, 7) 3px px;
+    font-weight: 500;
+    color: ivory;
+}
+
+.button1 {
+    font-size: 1.5rem;
+    text-shadow: black 3px px;
+    font-weight: 500;
 }

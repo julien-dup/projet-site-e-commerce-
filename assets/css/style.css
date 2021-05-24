@@ -180,7 +180,7 @@ section .wave {
     height: 189px;
     width: 100%;
     background-size: 100%;
-    background: url("../img/Vector\ 1.svg") center ;
+    background: url("../img/Vector\ 1.svg") ;
 }
 
 section .wave.wave1 {

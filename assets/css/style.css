@@ -180,11 +180,11 @@
 }
 
 .social-logo {
-    height: 2em;
+    height: 2.5em;
 }
 
 .twitter {
-    height: 1.7em;
+    height: 2.1em;
 }
 
 .social-logo,
@@ -211,56 +211,6 @@
 .button1:active {
     box-shadow: unset;
     transform: translate(5px, 5px);
-}
-
-/***** Adel MEDIA QUERIES *****/
-
-@media screen and (max-width: 952px) {
-    .logo {
-        width: 100px;
-        height: 125px;
-    }
-
-    .menu a {
-        font-size: 1.5rem;
-    }
-}
-
-@media screen and (max-width: 852px) {
-    .checkbtn {
-        display: block;
-    }
-
-    .menu {
-        display: none;
-    }
-
-    .responsive-menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .responsive-logo {
-        width: 100px;
-        height: 125px;
-    }
-
-    .responsive-menu ul {
-        margin: 2rem 0;
-        display: flex;
-        grid-gap: 2em;
-    }
-
-    .basket {
-        padding: 5px 15px;
-    }
-
-    .footer {
-        flex-direction: column;
-        grid-gap: 1em;
-        font-size: 1.2em;
-    }
 }
 
 /* Julien GLASS MORPHISM */
@@ -385,4 +335,67 @@ section .wave.wave3 {
     background: black;
     color: ivory;
     transition: 0.1s;
+}
+
+/***** Adel MEDIA QUERIES *****/
+
+@media screen and (max-width: 952px) {
+    .logo {
+        width: 100px;
+        height: 125px;
+    }
+
+    .menu a {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 852px) {
+    .card-img-top {
+        height: 450px;
+    }
+
+    .button1 {
+        width: 6em;
+        font-size: 1em;
+    }
+
+    .card-title {
+        font-size: 1.5em;
+    }
+
+    .description {
+        font-size: 1em;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .responsive-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .responsive-logo {
+        width: 100px;
+        height: 125px;
+    }
+
+    .responsive-menu ul {
+        margin: 2rem 0;
+        display: flex;
+        grid-gap: 2em;
+    }
+
+    .basket {
+        padding: 5px 15px;
+    }
+
+    .footer {
+        flex-direction: column;
+        grid-gap: 1em;
+        font-size: 1.2em;
+    }
 }

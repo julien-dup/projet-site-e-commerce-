@@ -206,6 +206,12 @@
     }
 }
 
+@media screen and (max-width: 952px) {
+    .checkbtn {
+        display: block;
+    }
+}
+
 /* Julien GLASS MORPHISM */
 
 .card{

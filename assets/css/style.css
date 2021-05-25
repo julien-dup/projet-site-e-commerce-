@@ -415,6 +415,6 @@ section .wave.wave3 {
     .footer {
         flex-direction: column;
         grid-gap: 1em;
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
 }

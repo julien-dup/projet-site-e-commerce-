@@ -280,7 +280,7 @@ section .wave {
     height: 189px;
     width: 100%;
     background-size: 100%;
-    background: url("../img/Vector\ 1.svg") center ;
+    background: url("../img/Vector\ 1.svg") ;
 }
 
 section .wave.wave1 {
@@ -352,4 +352,12 @@ section .wave.wave3 {
     font-size: 1.5rem;
     text-shadow: black 3px px;
     font-weight: 500;
+}
+.button1:active {
+    font-size: 1.5rem;
+    text-shadow: black 3px px;
+    font-weight: 500;
+    background: black;
+    color: ivory;
+    transition: 0.1s;
 }

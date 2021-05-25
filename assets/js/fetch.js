@@ -35,7 +35,7 @@ function displayFrance() {
                             <div class="col-3 d-flex justify-content-center">
                                 <div class="row">
                                     <p class="card-title  text-center">${element.price} € </p>
-                                    <button class="button1" type="button" data-name="${element.name}" data-duration="${element.duration}" data-price="${element.price}" class=" btn btn-danger">Réserver</button>
+                                    <button class="button1" type="button" data-name="${element.name}" data-duration="${element.duration}" data-price="${element.price}" class=" btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalAdd">Réserver</button>
                                 </div>
                             </div>
                         </div>
@@ -128,7 +128,7 @@ function displayEurope() {
                             <div class="col-3 d-flex justify-content-center">
                                 <div class="row">
                                     <p class="card-title  text-center">${element.price} euros</p>
-                                    <button class="button1" type="button" data-name="${element.name}" data-duration="${element.duration}" data-price="${element.price}" class=" btn btn-danger">Ajouter</button>
+                                    <button class="button1" type="button" data-name="${element.name}" data-duration="${element.duration}" data-price="${element.price}" class=" btn btn-danger">Réserver</button>
                                 </div>
                             </div>
                         </div>
@@ -220,7 +220,7 @@ function displayMonde() {
                             <div class="col-3 d-flex justify-content-center">
                                 <div class="row">
                                     <p class="card-title  text-center">${element.price} euros</p>
-                                    <button class="button1" type="button" data-name="${element.name}" data-duration="${element.duration}" data-price="${element.price}" class=" btn btn-danger">Ajouter</button>
+                                    <button class="button1" type="button" data-name="${element.name}" data-duration="${element.duration}" data-price="${element.price}" class=" btn btn-danger">Réserver</button>
                                 </div>
                             </div>
                         </div>

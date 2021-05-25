@@ -1,3 +1,4 @@
+// Récupère tous les sous totaux, les additionne et les affiche
 function getTotal() {
     let total = 0;
     let allInputSub = document.querySelectorAll('.subTotal');
@@ -7,9 +8,11 @@ function getTotal() {
     totalPrice.innerHTML = total + " &euro;";
 }
 
+// Supprime les précédentes cartes et affichent celles de la catégorie France
 function displayFrance() {
     mainContainer.innerHTML = "";
 
+    // Récupère les données des destinations à partir du Json
     fetch("./assets/json/france.json")
         .then(function (resp) {
             if (resp.ok) {
@@ -45,6 +48,7 @@ function displayFrance() {
 
             let allBtns = document.querySelectorAll("button[data-name]");
 
+            // Ajout au panier
             allBtns.forEach(element => {
                 element.addEventListener("click", function () {
 
@@ -67,6 +71,7 @@ function displayFrance() {
                         </tr>`);
                     }
 
+                    // Gestion du nombre de passagers
                     let minusBtn = document.getElementsByClassName("minusBtn")[count];
                     let plusBtn = document.getElementsByClassName("plusBtn")[count];
                     let spanQuantite = document.getElementsByClassName("spanBtn")[count];
@@ -100,9 +105,11 @@ function displayFrance() {
         });
 }
 
+// Supprime les précédentes cartes et affichent celles de la catégorie Europe
 function displayEurope() {
     mainContainer.innerHTML = "";
 
+    // Récupère les données des destinations à partir du Json
     fetch("./assets/json/europe.json")
         .then(function (resp) {
             if (resp.ok) {
@@ -138,6 +145,7 @@ function displayEurope() {
 
             let allBtns = document.querySelectorAll("button[data-name]");
 
+            // Ajout au panier
             allBtns.forEach(element => {
                 element.addEventListener("click", function () {
 
@@ -160,6 +168,7 @@ function displayEurope() {
                         </tr>`);
                     }
 
+                    // Gestion du nombre de passagers
                     let minusBtn = document.getElementsByClassName("minusBtn")[count];
                     let plusBtn = document.getElementsByClassName("plusBtn")[count];
                     let spanQuantite = document.getElementsByClassName("spanBtn")[count];
@@ -193,6 +202,7 @@ function displayEurope() {
         });
 }
 
+// Supprime les précédentes cartes et affichent celles de la catégorie Monde
 function displayMonde() {
     mainContainer.innerHTML = "";
 
@@ -284,8 +294,10 @@ function displayMonde() {
         });
 }
 
+// Affichage de la page France de base
 displayFrance();
 
+// Puis au clic change de catégorie
 franceBtn.addEventListener('click', () => {
     displayFrance();
 });

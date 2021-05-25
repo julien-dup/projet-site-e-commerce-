@@ -318,3 +318,11 @@ section .wave.wave3 {
     text-shadow: black 3px px;
     font-weight: 500;
 }
+.button1:active {
+    font-size: 1.5rem;
+    text-shadow: black 3px px;
+    font-weight: 500;
+    background: black;
+    color: ivory;
+    transition: 0.1s;
+}

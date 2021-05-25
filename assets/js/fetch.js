@@ -23,7 +23,11 @@ function displayFrance() {
                 mainContainer.innerHTML += `
                 <div class="col-md-5 col-lg-4 pt-2 rounded-3 text-center">
                     <div class="card" style="width: 100%">
+<<<<<<< HEAD
                         <img src="${element.photo}" class="card-img-top imageCss" height="750px" alt="Image de la destination">
+=======
+                        <img src="${element.photo}" class="card-img-top imageCss" alt="Image de la destination">
+>>>>>>> a2b9f18abea29057b2fad976524f1b955f3943be
 
                         <div class="card-body row">
                             <h5 class="card-title text-start fontsize1">${element.name} / ${element.duration}</h5>

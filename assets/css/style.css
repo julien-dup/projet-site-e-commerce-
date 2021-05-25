@@ -64,15 +64,24 @@
     position: relative;
 }
 
-.checkbtn {
-    font-size: 2.5em;
-    color: white;
-    cursor: pointer;
+.responsive-menu {
     display: none;
+
 }
 
-#check {
-    display: none;
+.responsive-menu ul li {
+    list-style: none;
+}
+
+.responsive-menu ul li a {
+    color: white;
+    /* text-decoration: none; */
+    font-size: 1.5em;
+}
+
+.responsive-logo {
+    height: 200px;
+    border-radius: 20px;
 }
 
 .menu {
@@ -158,6 +167,7 @@
 .footer {
     padding: 20px 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     background: rgb(10, 10, 110);
@@ -204,9 +214,34 @@
     }
 }
 
-@media screen and (max-width: 952px) {
+@media screen and (max-width: 852px) {
     .checkbtn {
         display: block;
+    }
+    .menu {
+        display: none;
+    }
+    .responsive-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .responsive-logo {
+        width: 100px;
+        height: 125px;
+    }
+    .responsive-menu ul {
+        margin: 2rem 0;
+        display: flex;
+        grid-gap: 2em;
+    }
+    .basket {
+        padding: 5px 15px;
+    }
+    .footer {
+        flex-direction: column;
+        grid-gap: 1em;
+        font-size: 1.2em;
     }
 }
 

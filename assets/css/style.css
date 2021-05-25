@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -86,10 +88,27 @@
     align-items: center;
 }
 
+.logo-div {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+}
+.power {
+    font-size: 2em;
+    color: rgb(14, 103, 143);
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.airlines {
+    font-size: 1.5em;
+}
+
 .logo {
-    width: 125px;
-    height: 150px;
-    border-radius: 20px;
+    width: 12em;
+    height: 12em;
 }
 
 .link {
@@ -379,7 +398,7 @@ section .wave.wave3 {
     }
 
     .responsive-logo {
-        width: 100px;
+        width: 125px;
         height: 125px;
     }
 
